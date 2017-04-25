@@ -1,12 +1,12 @@
 {
-  "name": "battle",
+  "name": "react-starter",
   "version": "1.0.0",
-  "description": "",
+  "description": "starter configs for react projects",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
-    "start": "webpack-dev-server --open"
+    "start": "webpack-dev-server --open  --port 3001 --inline --hot --progress --history-api-fallback"
   },
   "babel": {
     "presets": [
