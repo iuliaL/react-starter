@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { PropTypes, Component} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
@@ -8,4 +8,8 @@ export default class App extends Component {
 	}
 }
 
-ReactDOM.render(<App/>, document.getElementById('app'));
+App.propTypes = {
+	testProp: PropTypes.string.isRequired
+};
+
+ReactDOM.render(<App testProp={'Hey!'}/>, document.getElementById('app'));

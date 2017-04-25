@@ -9,11 +9,15 @@
     "start": "webpack-dev-server --open"
   },
   "babel": {
-	  "presets": [ "react", "env" ]
-	},
+    "presets": [
+      "react",
+      "env"
+    ]
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "prop-types": "^15.5.8",
     "react": "^15.5.4",
     "react-dom": "^15.5.4"
   },
