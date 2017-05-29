@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 export default class App extends Component {
 	render() {
-		return <div>{this.props.testProp} React Starter template!</div>
+		return <h1>{this.props.testProp} React Starter template!</h1>
 	}
 }
 
