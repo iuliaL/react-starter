@@ -3,9 +3,9 @@
 import React, { Component} from 'react';
 import ReactDOM from 'react-dom';
 
-//import './index.css'; /* this is not used*/
+//import 'css/style.css'; /* this is not used*/
 
-import styles from './styles/main.sass';
+import './styles/main.sass';
 
 //Components
 import App from './components/App'

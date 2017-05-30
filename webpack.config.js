@@ -6,7 +6,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 
-
 const config = {
 	entry: './app/index.js',
 	module: {
@@ -14,7 +13,7 @@ const config = {
 			{
 				test: /(\.css|\.sass)$/,
 				exclude: /node_modules/,
-				use: ExtractTextPlugin.extract({
+				use: ['css-hot-loader'].concat(ExtractTextPlugin.extract({
 					fallback: 'style-loader',
 					// Could also be write as follow:
 					// use: 'css-loader?modules&importLoader=2&sourceMap&localIdentName=[name]__[local]___[hash:base64:5]!sass-loader'
@@ -45,27 +44,8 @@ const config = {
 							}
 						}
 					]
-				}),
+				})),
 			},
-			// {
-			// 	test: /\.css$/,
-			// 	exclude: /node_modules/,
-			// 	use: ExtractTextPlugin.extract({
-			// 		fallback: 'style-loader',
-			// 		// Could also be write as follow:
-			// 		// use: 'css-loader?modules&localIdentName=[name]__[local]___[hash:base64:5]!postcss-loader'
-			// 		use: [
-			// 			{
-			// 				loader: 'css-loader',
-			// 				query: {
-			// 					modules: true,
-			// 					localIdentName: '[name]__[local]___[hash:base64:5]'
-			// 				}
-			// 			},
-			//
-			// 		]
-			// 	}),
-			// },
 			{
 				test: /\.(js)$/,
 				exclude: /(node_modules|bower_components)/,
@@ -84,7 +64,6 @@ const config = {
 			template: 'app/index.html'
 		}),
 		new ExtractTextPlugin({ filename: 'css/style.css', disable: false, allChunks: true }), // this means dist/css/style.css
-		new webpack.HotModuleReplacementPlugin()
 	]
 		
 	
