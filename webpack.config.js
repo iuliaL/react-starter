@@ -21,10 +21,10 @@ const config = {
 						{
 							loader: 'css-loader',
 							query: {
-								modules: true,
+								// modules: true,
 								sourceMap: true,
 								importLoaders: 2,
-								localIdentName: '[name]__[local]___[hash:base64:5]'
+								// localIdentName: '[name]__[local]___[hash:base64:5]'
 							}
 						},
 						{
